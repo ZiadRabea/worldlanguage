@@ -41,13 +41,14 @@ function pauseVideo() {
 
 // Debounce the scroll event to avoid excessive calls
 var scrollTimeout;
+if (window.innerWidth > 700){
 window.addEventListener('scroll', function () {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(function () {
         pauseVideo();
         isScrolling = false;
     }, 100); // Adjust the debounce delay as needed
-});
+})};
 var active_animation = true
 // Function to update video frame on requestAnimationFrame
 function updateVideoFrame() {
@@ -69,7 +70,20 @@ function updateVideoFrame() {
 }
 
 // Initial call to start updating video frame
-updateVideoFrame();
+if (window.innerWidth > 700){
+    updateVideoFrame();
+}
+else{
+    vid.play()
+    document.getElementById("container").style.margin = 0
+    setTimeout(() => {
+        vid.style.display = "none"
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })
+    }, 13000);
+}
 // JavaScript for handling navigation arrows and bullets
 let images = ["assets/code1.png", "assets/code2.png", "assets/code3.png", "assets/code4.png", "assets/code5.png"]
 let des = ["Hello world application in world language (English)", "Application Hello World dans la langue du monde (français)", "Dünya dilinde Merhaba Dünya uygulaması (Türkçe)", "世界言語 (トルコ語) の Hello world アプリケーション", "تطبيق أهلاً بالعالم بلغة العالم (العربية)"]
