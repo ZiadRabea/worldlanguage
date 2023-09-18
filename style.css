@@ -29,6 +29,13 @@ body{
   min-height: 100vh;
   background-color: #000000;
 }
+.btn{
+  transition: all .3 ease-in-out;
+}
+.btn:hover{
+  background-color: #00ADB5;
+  color:black;
+}
 nav{
   position: fixed;
   top: 0;
