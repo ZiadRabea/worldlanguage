@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 }
 body{
   min-height: 100vh;
-  background-image: image("images/bg.gif");
+  background-image: url("images/bg.gif");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
