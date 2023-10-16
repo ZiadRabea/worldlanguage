@@ -27,7 +27,10 @@ body::-webkit-scrollbar-thumb {
 }
 body{
   min-height: 100vh;
-  background-color: #000000;
+  background-image: image("images/bg.gif");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .btn{
   transition: all .3 ease-in-out;
