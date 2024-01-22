@@ -4,7 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <title>World language </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -52,7 +53,21 @@
       </div>
     </div>
   </nav>
-    <section class="slided-images" id="top">
+
+  <section style="height:100vh">
+    <div id="particles-js"></div>
+
+      <!-- stats - count particles -->
+    <div class="count-particles">
+      <span class="js-count-particles">--</span> particles
+    </div>
+    <img src="images/code.gif" style="z-index: 1;position: relative; width: 80%; height: 60%; margin-left: 10%; margin-top:100px">
+    <div class="typedC">
+      <span class="typed"></span>
+    </div>
+  </section>
+
+    <section style="height: 100vh; background-color: black;">
       <div class="slidecode">
         <div class="code">
           <img src="" id="code">
@@ -64,9 +79,16 @@
           </div>
         </div>
         <div class="des" id="des"></div>
-        <a href="https://worldlang.pythonanywhere.com/" style="width:200px;text-align:center;margin:0 auto;display: flow-root;"class="download-button btn">
-          Try Now &rightarrow;
+        <a href="https://worldenv.onrender.com/" style="width:200px;text-align:center;margin:0 auto;display: flow-root;padding: 10px; color: white; background: green; font-weight: bold;width: auto;border: none; border-radius: 20px;box-shadow: inset 5px 5px 10px #000000, inset -5px -5px 10px darkmagenta;"class="download-button btn">
+          Try Now ►
         </a>
+        <div class="typedC androiddiv">
+          <span class="typed_info"></span>
+        </div>
+      </div>
+      <div class="desktop">
+        <div class="code">
+          <img src="images/rocket.gif" style="height: 100% !important;">
       </div>
     </section>
     <section class="slided-images">
@@ -144,6 +166,8 @@
         <!-- Add more project items as needed -->
     </div>
   </section>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>
