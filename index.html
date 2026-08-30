@@ -1,167 +1,1041 @@
 <!DOCTYPE html>
-<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title>World language </title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" href="images/world-logo.png" type="image/png">
-    <meta name="google-site-verification" content="V3pwwuw_0g8MHV7VKa9nX5bUqAFAjJ35TZ0Yu_M5iMc" />
-   </head>
-<body>
-  <nav>
-    <div class="navbar">
-      <i class='bx bx-menu'></i>
-      <div class="logo"><a href="#"><div style="display: flex; justify-content: center; align-items: center;"><img src="images/world-logo.png" width="60", height="60"><div style="margin-left:20px;">World</div></div></a></div>
-      <div class="nav-links">
-        <div class="sidebar-logo more-arrow">
-          <span class="logo-name">World language</span>
-          <i class='bx bx-x' ></i>
-        </div>
-        <ul class="links">
-          <li class="nav-option active"><a href="#">HOME</a></li>
-          <li class="nav-option">
-            <a href="#">Dwonload</a>
-            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-            <ul class="htmlCss-sub-menu sub-menu">
-              <li class="dropdown-option"><a href="https://www.github.com/ZiadRabea/WorldLang/releases/download/v1.0.0/WorldLang.Installer.exe">WorldLang Latest Version</a></li>
-              <li class="dropdown-option"><a onclick="alert('under development')" href="#">Android Editor</a></li>
-              <li class="dropdown-option"><a href="#" onclick="alert('under development')">Online IDE</a></li>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-option">
-            <a href="#">Resources</a>
-            <i class='bx bxs-chevron-down js-arrow arrow '></i>
-            <ul class="js-sub-menu sub-menu">
-               <li class="nav-option"><a href="https://www.sirati.space/book">Get The Book</a></li>
-            </ul>
-          </li>
-          <li class="nav-option"><a href="mailto:zidr2005@gmail.com">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <section style="height:100vh">
-    <div id="particles-js"></div>
+  <title>WorldLang — Programming belongs to everyone.</title>
+  <meta
+    name="description"
+    content="WorldLang is a multilingual programming language designed to make programming education more accessible."
+  >
 
-      <!-- stats - count particles -->
-    <div class="count-particles">
-      <span class="js-count-particles">--</span> particles
-    </div>
-    <img src="images/code.gif" style="z-index: 1;position: relative; width: 80%; height: 60%; margin-left: 10%; margin-top:100px">
-    <div class="typedC">
-      <span class="typed"></span>
-    </div>
-  </section>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <section style="height: 100vh; background-color: black;">
-      <div class="slidecode">
-        <div class="code">
-          <img src="" id="code">
-          <div class="next">
-            <i class="fas fa-arrow-right" onclick="next()"></i></a>
-          </div>
-          <div class="prev">
-            <i class="fas fa-arrow-left" onclick="prev()"></i></a>
-          </div>
-        </div>
-        <div class="des" id="des"></div>
-        <a href="https://worldenv.onrender.com/" style="width:200px;text-align:center;margin:0 auto;display: flow-root;padding: 10px; color: white; background: green; font-weight: bold;width: auto;border: none; border-radius: 20px;box-shadow: inset 5px 5px 10px #000000, inset -5px -5px 10px darkmagenta;"class="download-button btn">
-          Try Now ►
-        </a>
-        <div class="typedC androiddiv">
-          <span class="typed_info"></span>
-        </div>
-      </div>
-      <div class="desktop">
-        <div class="code">
-          <img src="images/rocket.gif" style="height: 100% !important;">
-      </div>
-    </section>
-    <!-- <section class="slided-images">
-      <video height="width" autoplay muted loop id="myVideo">
-          <source src="assets/bg.mp4" type="video/mp4"> 
-      </video>
-      <div class="slidecode" style="height: 65%;">
-        <h1 class="des" style="width:100%;">What is World Language?</h1>        
-        <div style="height: 100%;">
-          <iframe class="iframe" style="width:100%; height: 100%;" src="https://www.youtube.com/embed/S9kSxOcDVuc" title="About worldlang" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="des" id="des">
-          
-        </div>
-        
-      </div>
-      </video>
-    </section>
-    <section class="slided-images">
-      <video height="width" autoplay muted loop id="myVideo">
-          <source src="assets/bg.mp4" type="video/mp4"> 
-      </video>
-      <div class="slidecode" style="height: 65%;">
-        <h1 class="des" style="width:100%;">Get started with world ✨🚀</h1>        
-        <div style="height: 100%;">
-          <iframe class ="iframe" style="width:100%; height: 100%;"  src="https://www.youtube.com/embed/KwiJnp7Fa50" title="WorldLang | How to use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
-        </div>
-        <div class="des" id="des">   
-        </div>
-      </div>
-    </section> -->
-    <section class="slided-images" style="display: block;">
-    
-        <video height="width" autoplay muted loop id="myVideo">
-            <source src="assets/bg.mp4" type="video/mp4"> 
-        </video>
-        <h1 class="des" style="width:100%;">
-          Cool Projects in World Language
-        </h1>
-    <div class="project-grid">
-      <div class="project">
-          <a href="https://youtu.be/02VMaRy6lLs?si=fNGd5U4oqYFTiZBf" target="_blank">
-              <img src="assets/project1.jpg" alt="Project 1">
-              <h3>Speaking Chatbot</h3>
-          </a>
-      </div>
-      <div class="project">
-          <a href="https://youtu.be/svuRmc86-MI?si=hXH3mjRo3kT6ACy5" target="_blank">
-              <img src="assets/project2.jpg" alt="Project 2">
-              <h3>Console Game</h3>
-          </a>
-      </div>
-      <div class="project">
-        <a href="https://www.youtube.com/watch?v=8e7tWUK8ePg" target="_blank">
-            <img src="assets/project3.jpg" alt="Project 1">
-            <h3>Robotics</h3>
-        </a>
-    </div>
-    <div class="project">
-        <a href="https://github.com/ZiadRabea/World-Programming" target="_blank">
-            <img src="assets/project4.jpg" alt="Project 2">
-            <h3>World Language</h3>
-        </a>
-    </div>
-    <div class="project">
-      <a href="https://www.mediafire.com/file/5r5ncn8mq5zmfm0/WorldLang_edu.exe/file" target="_blank">
-          <img src="assets/project5.jpg" alt="Project 2">
-          <h3>Get Started</h3>
-      </a>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "-apple-system",
+              "BlinkMacSystemFont",
+              "Segoe UI",
+              "sans-serif"
+            ],
+            mono: [
+              "JetBrains Mono",
+              "SFMono-Regular",
+              "Consolas",
+              "Liberation Mono",
+              "monospace"
+            ]
+          },
+          animation: {
+            "float": "float 7s ease-in-out infinite",
+            "pulse-soft": "pulseSoft 4s ease-in-out infinite",
+            "cursor": "cursor 1s steps(2, jump-none) infinite",
+            "grid": "grid 20s linear infinite"
+          },
+          keyframes: {
+            float: {
+              "0%,100%": { transform: "translateY(0) rotate(-1deg)" },
+              "50%": { transform: "translateY(-14px) rotate(1deg)" }
+            },
+            pulseSoft: {
+              "0%,100%": { opacity: ".2", transform: "scale(1)" },
+              "50%": { opacity: ".4", transform: "scale(1.08)" }
+            },
+            cursor: {
+              "0%,100%": { opacity: "1" },
+              "50%": { opacity: "0" }
+            },
+            grid: {
+              from: { backgroundPosition: "0 0" },
+              to: { backgroundPosition: "48px 48px" }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg: #060708;
+      --green: #8cffb0;
+      --purple: #b58cff;
+      --line: rgba(255,255,255,.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: white;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(140,255,176,.065), transparent 28%),
+        #060708;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: rgba(140,255,176,.2);
+      color: white;
+    }
+
+    .glass {
+      background: rgba(12,14,15,.72);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(120deg, #fff 15%, #dce8df 55%, #8cffb0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .terminal {
+      box-shadow:
+        0 45px 110px rgba(0,0,0,.58),
+        0 0 90px rgba(140,255,176,.045);
+    }
+
+    .terminal::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      pointer-events: none;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.14),
+          transparent 35%,
+          rgba(140,255,176,.06)
+        );
+      mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: xor;
+      padding: 1px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .terminal-code {
+      transition:
+        opacity .3s ease,
+        transform .3s ease;
+    }
+
+    .terminal-code.out {
+      opacity: 0;
+      transform: translateY(7px);
+    }
+
+    .language-tab.active {
+      color: var(--green);
+      border-color: rgba(140,255,176,.32);
+      background: rgba(140,255,176,.05);
+    }
+
+    .code-panel {
+      background:
+        radial-gradient(circle at 80% 15%, rgba(140,255,176,.035), transparent 25%),
+        #090b0c;
+    }
+
+    .book-card {
+      transform-style: preserve-3d;
+    }
+
+    .book-card::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 7px;
+      bottom: 7px;
+      width: 11px;
+      border-radius: 4px 0 0 4px;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.015)
+        );
+      border-left: 1px solid rgba(255,255,255,.05);
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      opacity: .025;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+    }
+
+    @media (max-width: 768px) {
+      .hero-terminal {
+        animation-duration: 8.5s;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <div class="noise"></div>
+
+  <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+    <div class="absolute -top-52 left-1/2 -translate-x-1/2 w-[760px] h-[760px] rounded-full bg-[#8cffb0]/[.025] blur-3xl animate-pulse-soft"></div>
+    <div class="absolute top-[42%] -left-48 w-[430px] h-[430px] rounded-full bg-[#b58cff]/[.018] blur-3xl"></div>
+    <div class="absolute inset-0 grid-bg opacity-25 animate-grid"></div>
   </div>
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10 pt-5">
+      <nav class="glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-8 h-8 rounded-lg border border-white/10 bg-white/[.03] flex items-center justify-center group-hover:border-[#8cffb0]/30 transition">
+            <span class="font-mono text-[#8cffb0] text-sm">&lt;/&gt;</span>
+          </div>
+          <span class="font-semibold tracking-tight">
+            World<span class="text-[#8cffb0]">Lang</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-sm text-zinc-500">
+          <a href="#why" class="hover:text-white transition">Why</a>
+          <a href="#language" class="hover:text-white transition">Language</a>
+          <a href="#community" class="hover:text-white transition">Community</a>
+          <a href="#books" class="hover:text-white transition">Books</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a
+            href="#community"
+            class="hidden sm:inline-flex rounded-xl border border-white/10 px-4 py-2 text-sm text-zinc-300 hover:text-white hover:border-white/20 transition"
+          >
+            Join community
+          </a>
+
+          <a
+            href="#language"
+            class="inline-flex rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:bg-[#8cffb0] transition"
+          >
+            Explore
+          </a>
+        </div>
+      </nav>
     </div>
-    <h2 style="color:white; font-size:30px; width: 100%; text-align: center;">What are you waiting for? Join the world language revolution and take your programming journey to the next level.</h2>  
-    <div style="display: flex; justify-content: center; align-items: center;">
-    <a href="https://www.mediafire.com/file/5r5ncn8mq5zmfm0/WorldLang_edu.exe/file" class="download-button btn">Download Now</a>
-        <!-- Add more project items as needed -->
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center pt-32 pb-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 w-full">
+        <div class="grid lg:grid-cols-[.92fr_1.08fr] gap-14 xl:gap-20 items-center">
+
+          <div class="max-w-2xl reveal">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.025] px-3 py-1.5 text-xs text-zinc-400 mb-8">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#8cffb0] shadow-[0_0_12px_rgba(140,255,176,.75)]"></span>
+              A multilingual programming language
+            </div>
+
+            <h1 class="text-[3.5rem] sm:text-6xl lg:text-[4.65rem] xl:text-[5.15rem] font-semibold tracking-[-.065em] leading-[.94]">
+              Programming
+              <span class="gradient-text block">belongs to everyone.</span>
+            </h1>
+
+            <p class="mt-7 text-lg sm:text-xl leading-relaxed text-zinc-400 max-w-xl">
+              Billions of people grow up speaking languages other than English.
+              Learning to program shouldn't require them to learn another language first.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a
+                href="#why"
+                class="inline-flex items-center gap-2 rounded-xl bg-white text-black px-5 py-3 font-medium hover:bg-[#8cffb0] transition"
+              >
+                Why WorldLang
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#community"
+                class="inline-flex items-center rounded-xl border border-white/10 bg-white/[.025] px-5 py-3 text-zinc-300 hover:text-white hover:border-white/20 transition"
+              >
+                Meet the community
+              </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-600 font-mono">
+              <span>education</span>
+              <span class="w-1 h-1 rounded-full bg-zinc-700"></span>
+              <span>multilingual</span>
+              <span class="w-1 h-1 rounded-full bg-zinc-700"></span>
+              <span>open source</span>
+            </div>
+          </div>
+
+
+          <!-- HERO TERMINAL -->
+          <div class="hero-terminal relative animate-float reveal">
+
+            <div class="absolute inset-[-90px] bg-[#8cffb0]/[.025] blur-3xl rounded-full"></div>
+
+            <div class="terminal relative rounded-3xl border border-white/10 bg-[#090b0c]/95 overflow-hidden">
+
+              <div class="h-14 px-5 border-b border-white/[.07] flex items-center justify-between">
+
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-white/10"></span>
+                  <span class="w-3 h-3 rounded-full bg-white/10"></span>
+                  <span class="w-3 h-3 rounded-full bg-white/10"></span>
+                </div>
+
+                <div
+                  id="hero-language"
+                  class="absolute left-1/2 -translate-x-1/2 text-xs font-mono text-zinc-600"
+                >
+                  العربية
+                </div>
+
+                <span class="text-[10px] uppercase tracking-[.22em] text-zinc-700">
+                  worldlang
+                </span>
+              </div>
+
+
+              <div class="p-6 sm:p-8 min-h-[385px] font-mono text-[13px] sm:text-[14px] leading-8 min-h-fit">
+
+                <div id="hero-code" class="terminal-code"></div>
+
+                <div class="mt-8 pl-8 sm:pl-10 text-zinc-700">
+                  ──────────────────────────
+                </div>
+
+                <div class="flex mt-5">
+                  <span class="w-8 sm:w-10 shrink-0 text-zinc-700 select-none">05</span>
+
+                  <div>
+                    <span class="text-zinc-500">&gt;</span>
+                    <span id="hero-output" class="text-[#8cffb0] ml-2"></span>
+                    <span class="ml-1 inline-block w-[7px] h-4 bg-[#8cffb0] align-[-2px] animate-cursor"></span>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="border-t border-white/[.07] px-6 sm:px-8 py-4 flex items-center justify-between text-[10px] font-mono text-zinc-700">
+                <span id="hero-example">EXAMPLE / 01</span>
+                <span class="text-[#8cffb0]/60">READY</span>
+              </div>
+
+            </div>
+
+
+            <div class="absolute -bottom-7 left-6 sm:left-10 glass rounded-xl px-4 py-3 text-xs font-mono text-zinc-500">
+              <span class="text-[#8cffb0]">●</span>
+              one program · one language · one result
+            </div>
+
+            <div class="absolute -top-5 right-6 glass rounded-xl px-4 py-3 text-xs font-mono text-zinc-500">
+              <span class="text-[#b58cff]">λ</span>
+              learn by doing
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WHY -->
+    <section id="why" class="py-28 sm:py-36 border-t border-white/[.06]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+
+          <div class="lg:col-span-5 reveal">
+            <div class="text-xs uppercase tracking-[.24em] text-[#8cffb0]/70 font-mono">
+              01 / Why it matters
+            </div>
+
+            <h2 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-.055em] leading-[.95]">
+              Talent is everywhere.
+              <span class="text-zinc-500">Access isn't.</span>
+            </h2>
+          </div>
+
+
+          <div class="lg:col-span-7 reveal">
+
+            <p class="text-xl sm:text-2xl leading-relaxed text-zinc-400 max-w-3xl">
+              A young learner shouldn't have to solve two problems at once:
+              understanding how programming works and understanding the language
+              programming is written in.
+            </p>
+
+            <p class="mt-6 text-lg leading-8 text-zinc-600 max-w-2xl">
+              WorldLang explores a simpler starting point — let learners express
+              programming ideas in languages they already understand, so their
+              energy can go into
+              <span class="text-zinc-300">thinking like developers</span>.
+            </p>
+
+
+            <div class="mt-12 grid sm:grid-cols-3 gap-8">
+
+              <div>
+                <div class="text-3xl font-semibold tracking-tight">01</div>
+                <div class="mt-3 text-white font-medium">Think</div>
+                <p class="mt-2 text-sm leading-6 text-zinc-600">
+                  Build computational thinking without unnecessary language friction.
+                </p>
+              </div>
+
+              <div>
+                <div class="text-3xl font-semibold tracking-tight">02</div>
+                <div class="mt-3 text-white font-medium">Create</div>
+                <p class="mt-2 text-sm leading-6 text-zinc-600">
+                  Turn ideas into programs earlier, while curiosity is still growing.
+                </p>
+              </div>
+
+              <div>
+                <div class="text-3xl font-semibold tracking-tight">03</div>
+                <div class="mt-3 text-white font-medium">Grow</div>
+                <p class="mt-2 text-sm leading-6 text-zinc-600">
+                  Move from learner to builder, contributor, and eventually mentor.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- MISSION -->
+    <section class="py-20 sm:py-28 border-t border-white/[.06]">
+      <div class="max-w-5xl mx-auto px-6 text-center reveal">
+
+        <div class="text-xs uppercase tracking-[.24em] text-zinc-700 font-mono">
+          The mission
+        </div>
+
+        <blockquote class="mt-7 text-3xl sm:text-5xl lg:text-6xl font-medium tracking-[-.045em] leading-tight">
+          The next great programmer could be anywhere.
+          <span class="text-zinc-500">
+            Language shouldn't be what stops them.
+          </span>
+        </blockquote>
+
+      </div>
+    </section>
+
+
+    <!-- LANGUAGE -->
+    <section id="language" class="py-28 sm:py-36 border-t border-white/[.06]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="max-w-3xl reveal">
+          <div class="text-xs uppercase tracking-[.24em] text-[#8cffb0]/70 font-mono">
+            02 / The language
+          </div>
+
+          <h2 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-.055em] leading-[.95]">
+            Learn programming.
+            <span class="text-zinc-500">Not another alphabet.</span>
+          </h2>
+
+          <p class="mt-6 text-lg text-zinc-500 leading-8">
+            The goal is not to hide programming from the learner.
+            It's to remove an unnecessary first barrier, so the learner can
+            focus on logic, problem-solving, and creation.
+          </p>
+        </div>
+
+
+        <div class="mt-14 flex flex-wrap gap-2 reveal">
+          <button
+            class="language-tab active px-4 py-2 rounded-full border text-sm transition"
+            data-lang="ar"
+          >
+            العربية
+          </button>
+
+          <button
+            class="language-tab px-4 py-2 rounded-full border border-white/10 text-zinc-500 hover:text-zinc-200 transition"
+            data-lang="en"
+          >
+            English
+          </button>
+
+          <button
+            class="language-tab px-4 py-2 rounded-full border border-white/10 text-zinc-500 hover:text-zinc-200 transition"
+            data-lang="tr"
+          >
+            Türkçe
+          </button>
+
+          <button
+            class="language-tab px-4 py-2 rounded-full border border-white/10 text-zinc-500 hover:text-zinc-200 transition"
+            data-lang="ja"
+          >
+            日本語
+          </button>
+        </div>
+
+
+        <div class="mt-8 grid lg:grid-cols-[1.18fr_.82fr] gap-4">
+
+          <div class="glass rounded-3xl overflow-hidden reveal code-panel">
+
+            <div class="px-5 py-4 border-b border-white/[.07] flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-mono text-zinc-600">
+                  lesson.world
+                </span>
+
+                <span
+                  id="lesson-label"
+                  class="text-[10px] uppercase tracking-[.2em] text-zinc-700"
+                >
+                  Arabic
+                </span>
+              </div>
+
+              <span class="text-[10px] font-mono text-[#8cffb0]/60">
+                LEARN
+              </span>
+            </div>
+
+
+            <pre dir="auto"
+              id="lesson-code"
+              class="text-auto p-6 sm:p-8 text-[13px] sm:text-sm font-mono leading-8 min-h-[355px] overflow-x-auto"
+            ></pre>
+
+          </div>
+
+
+          <div class="glass rounded-3xl p-7 sm:p-8 reveal flex flex-col justify-between">
+
+            <div>
+              <div class="text-xs uppercase tracking-[.2em] text-zinc-700 font-mono">
+                One idea
+              </div>
+
+              <div id="language-title" class="mt-6 text-2xl font-medium tracking-tight">
+                Your language.
+              </div>
+
+              <p
+                id="language-description"
+                class="mt-4 text-sm sm:text-base text-zinc-600 leading-7"
+              >
+                Programming concepts can meet the learner in a language they already know.
+              </p>
+            </div>
+
+
+            <div class="mt-10 pt-6 border-t border-white/[.07]">
+              <div class="text-xs text-zinc-700 font-mono">
+                THE POINT
+              </div>
+
+              <div class="mt-3 text-lg text-zinc-300">
+                Spend your energy on logic — not translation.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FACTORIAL -->
+    <section class="py-28 sm:py-36 border-t border-white/[.06]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="grid lg:grid-cols-[.78fr_1.22fr] gap-14 lg:gap-20 items-center">
+
+          <div class="reveal">
+
+            <div class="text-xs uppercase tracking-[.24em] text-[#8cffb0]/70 font-mono">
+              03 / Real code
+            </div>
+
+            <h2 class="mt-5 text-4xl sm:text-5xl font-semibold tracking-[-.05em] leading-tight">
+              From “hello world”
+              <span class="text-zinc-500">to real thinking.</span>
+            </h2>
+
+            <p class="mt-6 text-lg text-zinc-500 leading-8">
+              WorldLang should not stop at making syntax familiar.
+              The real goal is to help learners think in programs:
+              variables, input, conditions, recursion, return values, and more.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-3 max-w-sm">
+              <div class="glass rounded-xl p-4">
+                <div class="text-xs text-zinc-700 font-mono">CONCEPT</div>
+                <div class="mt-2 text-white">Input</div>
+              </div>
+
+              <div class="glass rounded-xl p-4">
+                <div class="text-xs text-zinc-700 font-mono">CONCEPT</div>
+                <div class="mt-2 text-white">Variables</div>
+              </div>
+
+              <div class="glass rounded-xl p-4">
+                <div class="text-xs text-zinc-700 font-mono">CONCEPT</div>
+                <div class="mt-2 text-white">Conditionals</div>
+              </div>
+
+              <div class="glass rounded-xl p-4">
+                <div class="text-xs text-zinc-700 font-mono">CONCEPT</div>
+                <div class="mt-2 text-white">Recursion</div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="glass rounded-3xl overflow-hidden reveal">
+
+            <div class="px-5 py-4 border-b border-white/[.07] flex items-center justify-between">
+              <span class="text-xs font-mono text-zinc-600">
+                factorial.world
+              </span>
+
+              <span class="text-[10px] uppercase tracking-[.2em] text-zinc-700">
+                Arabic example
+              </span>
+            </div>
+
+
+            <pre
+              dir="rtl"
+              class="text-right p-6 sm:p-8 text-[12px] sm:text-[14px] font-mono leading-8 overflow-x-auto"
+            ><span class="text-zinc-600"># حاسبة المضروب</span>
+<span class="text-[#b58cff]">متغير</span> <span class="text-white">الرقم</span> <span class="text-zinc-500">=</span> <span class="text-[#b58cff]">عدد_صحيح</span><span class="text-white">(</span><span class="text-[#b58cff]">استقبل</span><span class="text-white">(</span><span class="text-[#8cffb0]">"أدخل رقماً"</span><span class="text-white">))</span>
+
+<span class="text-[#b58cff]">دالة</span> <span class="text-[#b58cff]">مضروب</span><span class="text-white">(</span><span class="text-white">رقم</span><span class="text-white">)</span>
+    <span class="text-[#b58cff]">اذا</span> <span class="text-white">رقم</span> <span class="text-white">==</span> <span class="text-purple-300">١</span> <span class="text-[#b58cff]">او</span> <span class="text-white">رقم</span> <span class="text-white">==</span> <span class="text-purple-300">٠</span> <span class="text-[#b58cff]">نفذ</span> <span class="text-[#b58cff]">ارجاع</span> <span class="text-purple-300">١</span>
+    <span class="text-[#b58cff]">ارجاع</span> <span class="text-white">رقم</span> <span class="text-zinc-500">*</span> <span class="text-[#b58cff]">مضروب</span><span class="text-white">(</span><span class="text-white">رقم</span> <span class="text-zinc-500">-</span> <span class="text-purple-300">١</span><span class="text-white">)</span>
+<span class="text-[#b58cff]">نهاية</span>
+
+<span class="text-[#b58cff]">طباعة</span><span class="text-white">(</span><span class="text-[#b58cff]">مضروب</span><span class="text-white">(</span><span class="text-purple-300">٥</span><span class="text-white">))</span></pre>
+
+
+            <div class="border-t border-white/[.07] px-6 sm:px-8 py-5 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+              <span class="text-xs text-zinc-700 font-mono">INPUT</span>
+              <span class="text-sm text-zinc-500">
+                أدخل رقماً
+                <span class="text-zinc-700 mx-2">→</span>
+                5
+              </span>
+
+              <span class="hidden sm:block text-zinc-800">|</span>
+
+              <span class="text-xs text-zinc-700 font-mono">OUTPUT</span>
+              <span class="text-sm text-[#8cffb0]">120</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- COMMUNITY -->
+    <section id="community" class="py-28 sm:py-36 border-t border-white/[.06]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-14 lg:gap-20 items-start">
+
+          <div class="reveal">
+
+            <div class="text-xs uppercase tracking-[.24em] text-[#8cffb0]/70 font-mono">
+              04 / The community
+            </div>
+
+            <h2 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-.055em] leading-[.95]">
+              Don't just use the language.
+              <span class="text-zinc-500">Help shape it.</span>
+            </h2>
+
+            <p class="mt-6 text-lg text-zinc-500 leading-8 max-w-xl">
+              WorldLang grows through people. Ask questions, share projects,
+              suggest features, follow updates, improve the docs, translate,
+              experiment, or contribute code.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a
+                href="https://flow.daisyscript.com"
+                class="inline-flex items-center gap-2 rounded-xl bg-white text-black px-5 py-3 font-medium hover:bg-[#8cffb0] transition"
+              >
+                Join the community
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/ZiadRabea/WorldLang"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex rounded-xl border border-white/10 px-5 py-3 text-zinc-300 hover:text-white hover:border-white/20 transition"
+              >
+                Contribute on GitHub
+              </a>
+            </div>
+
+          </div>
+
+
+          <div class="grid sm:grid-cols-2 gap-4 reveal">
+
+            <div class="glass rounded-2xl p-7">
+              <div class="w-10 h-10 rounded-xl border border-white/10 bg-white/[.025] flex items-center justify-center text-[#8cffb0]">↗</div>
+              <h3 class="mt-8 text-xl font-medium">Learn</h3>
+              <p class="mt-3 text-sm leading-7 text-zinc-600">
+                Ask questions, share exercises, post projects, and learn with other people.
+              </p>
+            </div>
+
+            <div class="glass rounded-2xl p-7">
+              <div class="w-10 h-10 rounded-xl border border-white/10 bg-white/[.025] flex items-center justify-center text-[#b58cff]">◇</div>
+              <h3 class="mt-8 text-xl font-medium">Suggest</h3>
+              <p class="mt-3 text-sm leading-7 text-zinc-600">
+                Propose syntax, features, languages, lessons, and ideas for the future.
+              </p>
+            </div>
+
+            <div class="glass rounded-2xl p-7">
+              <div class="w-10 h-10 rounded-xl border border-white/10 bg-white/[.025] flex items-center justify-center text-[#8cffb0]">+</div>
+              <h3 class="mt-8 text-xl font-medium">Build</h3>
+              <p class="mt-3 text-sm leading-7 text-zinc-600">
+                Contribute code, docs, examples, translations, tooling, and educational material.
+              </p>
+            </div>
+
+            <div class="glass rounded-2xl p-7">
+              <div class="w-10 h-10 rounded-xl border border-white/10 bg-white/[.025] flex items-center justify-center text-[#b58cff]">∞</div>
+              <h3 class="mt-8 text-xl font-medium">Grow</h3>
+              <p class="mt-3 text-sm leading-7 text-zinc-600">
+                Help make programming a little more accessible for the next generation.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DEVELOPERS -->
+    <section class="py-28 sm:py-36 border-t border-white/[.06]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="max-w-2xl reveal">
+
+          <div class="text-xs uppercase tracking-[.24em] text-[#8cffb0]/70 font-mono">
+            05 / Explore the project
+          </div>
+
+          <h2 class="mt-5 text-4xl sm:text-5xl font-semibold tracking-[-.05em]">
+            See where WorldLang is going.
+          </h2>
+
+          <p class="mt-6 text-lg text-zinc-500 leading-8">
+            Read the documentation, follow development, inspect the source,
+            and help shape the future of the language.
+          </p>
+
+        </div>
+
+
+        <div class="mt-12 grid md:grid-cols-3 gap-4 reveal">
+
+          <a href="https://ziadrabea.github.io/WorldDocs" class="glass rounded-2xl p-6 group">
+            <div class="text-xs font-mono text-zinc-700">01</div>
+            <h3 class="mt-8 text-lg font-medium group-hover:text-[#8cffb0] transition">
+              Documentation
+            </h3>
+            <p class="mt-2 text-sm leading-6 text-zinc-600">
+              Learn the language and explore real examples.
+            </p>
+            <div class="mt-8 text-sm text-zinc-500 group-hover:text-white transition">
+              Open docs →
+            </div>
+          </a>
+
+
+          <a
+            href="https://github.com/ZiadRabea/WorldLang"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass rounded-2xl p-6 group"
+          >
+            <div class="text-xs font-mono text-zinc-700">02</div>
+            <h3 class="mt-8 text-lg font-medium group-hover:text-[#8cffb0] transition">
+              GitHub
+            </h3>
+            <p class="mt-2 text-sm leading-6 text-zinc-600">
+              Explore the source and contribute to the language.
+            </p>
+            <div class="mt-8 text-sm text-zinc-500 group-hover:text-white transition">
+              Open repository →
+            </div>
+          </a>
+
+
+          <a href="https://flow.daisyscript.com" class="glass rounded-2xl p-6 group">
+            <div class="text-xs font-mono text-zinc-700">03</div>
+            <h3 class="mt-8 text-lg font-medium group-hover:text-[#8cffb0] transition">
+              Updates
+            </h3>
+            <p class="mt-2 text-sm leading-6 text-zinc-600">
+              Follow new features, language changes, and community news.
+            </p>
+            <div class="mt-8 text-sm text-zinc-500 group-hover:text-white transition">
+              See updates →
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BOOKS -->
+    <section id="books" class="py-28 sm:py-36 border-t border-white/[.06]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="max-w-3xl reveal">
+
+          <div class="text-xs uppercase tracking-[.24em] text-[#8cffb0]/70 font-mono">
+            06 / The library
+          </div>
+
+          <h2 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-.055em] leading-[.95]">
+            Books that meet you
+            <span class="text-zinc-500">where you are.</span>
+          </h2>
+
+          <p class="mt-6 text-lg text-zinc-500 leading-8">
+            Learning resources should be as welcoming as the language itself.
+            WorldLang's books can bring the same ideas to different linguistic communities.
+          </p>
+
+        </div>
+
+     <!-- BOOK -->
+    <section id="book" class="py-28 sm:py-36 border-t border-white/[.06]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-[.75fr_1.25fr] gap-16 lg:gap-24 items-center">
+
+          <div class="relative flex justify-center reveal">
+            <div class="absolute w-72 h-72 rounded-full bg-[#8cffb0]/[.035] blur-3xl"></div>
+
+            <div class="relative w-[240px] sm:w-[285px] aspect-[.68/1] rounded-r-2xl rounded-l-md border border-white/10 bg-gradient-to-br from-zinc-900 to-[#0b0d0e] shadow-2xl rotate-[-6deg]">
+              <div class="absolute inset-y-0 left-0 w-4 bg-white/[.025] border-r border-white/[.04]"></div>
+
+              <div class="absolute inset-0 p-8 flex flex-col justify-between">
+                <div>
+                  <div class="text-[10px] tracking-[.3em] uppercase text-[#8cffb0]/70 font-mono">WORLDLANG</div>
+                  <div class="mt-8 text-4xl font-semibold tracking-[-.06em] leading-[.95]">
+                    The
+                    <br>Language
+                    <br>Between
+                    <br>Worlds.
+                  </div>
+                </div>
+
+                <div>
+                  <div class="h-px w-12 bg-[#8cffb0]/50"></div>
+                  <div class="mt-4 text-xs text-zinc-600 font-mono">LANGUAGE / REFERENCE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="max-w-xl reveal">
+            <div class="text-xs uppercase tracking-[.24em] text-[#8cffb0]/70 font-mono">06 / The book</div>
+            <h2 class="mt-5 text-4xl sm:text-5xl font-semibold tracking-[-.055em] leading-tight">
+              A language deserves
+              <span class="text-zinc-500">a philosophy.</span>
+            </h2>
+            <p class="mt-6 text-lg text-zinc-500 leading-8">
+              Go deeper into the ideas, design, syntax, and reasoning behind WorldLang.
+            </p>
+
+            <div class="mt-8 flex items-center gap-8 text-sm">
+              <div>
+                <div class="text-white font-medium">265</div>
+                <div class="text-zinc-600">pages</div>
+              </div>
+              <div class="w-px h-8 bg-white/10"></div>
+              <div>
+                <div class="text-white font-medium">WorldLang</div>
+                <div class="text-zinc-600">language reference</div>
+              </div>
+            </div>
+
+            <div class="mt-9">
+              <a href="https://www.sirati.space/book" class="inline-flex items-center gap-2 rounded-xl border border-white/10 px-5 py-3 text-zinc-300 hover:text-white hover:border-white/20 transition">
+                Explore the books
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FINAL CTA -->
+    <section class="py-32 sm:py-44">
+      <div class="max-w-5xl mx-auto px-6 text-center reveal">
+
+        <div class="text-xs uppercase tracking-[.25em] text-zinc-700 font-mono">
+          The next chapter
+        </div>
+
+        <h2 class="mt-7 text-5xl sm:text-6xl lg:text-8xl font-semibold tracking-[-.07em] leading-[.9]">
+          Let's remove one
+          <span class="gradient-text block">barrier at a time.</span>
+        </h2>
+
+        <p class="mt-8 text-lg text-zinc-500 max-w-xl mx-auto leading-8">
+          Join the people learning, questioning, experimenting,
+          and building WorldLang into something bigger.
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-3">
+          <a
+            href="#community"
+            class="inline-flex items-center gap-2 rounded-xl bg-white text-black px-6 py-3.5 font-medium hover:bg-[#8cffb0] transition"
+          >
+            Join the community
+
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 12H19M13 6L19 12L13 18"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://github.com/ZiadRabea/WorldLang"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex rounded-xl border border-white/10 px-6 py-3.5 text-zinc-300 hover:text-white hover:border-white/20 transition"
+          >
+            Contribute on GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[.06]">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-8">
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+        <div class="text-sm text-zinc-700">
+          © <span id="year"></span> WorldLang
+        </div>
+
+        <div class="flex items-center gap-6 text-sm text-zinc-700">
+          <a href="#why" class="hover:text-white transition">Why</a>
+          <a href="#language" class="hover:text-white transition">Language</a>
+          <a href="#community" class="hover:text-white transition">Community</a>
+          <a href="#books" class="hover:text-white transition">Books</a>
+        </div>
+
+      </div>
+
     </div>
-  </section>
-    <script src="js/script.js"></script>
-    <script src="js/typed.min.js"></script>
-    <script src="js/js.js"></script>
+
+  </footer>
+
+
+  <script src="js/script.js"></script>
+
 </body>
 </html>

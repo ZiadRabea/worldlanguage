@@ -1,193 +1,213 @@
-// search-box open close js code
-let navbar = document.querySelector(".navbar");
-let searchBox = document.querySelector(".search-box .bx-search");
+const heroExamples = {
+  ar: {
+    label: "العربية",
+    example: "EXAMPLE / 01",
+    direction: "rtl",
+    code: `
+      <div class="text-zinc-700" dir="ltr">// hello.world</div>
+      <div class="mt-2">
+        <span class="text-[#b58cff]">طباعة</span><span class="text-white">(</span><span class="text-[#8cffb0]">"أهلاً بالعالم"</span><span class="text-white">)</span>
+      </div>
+    `,
+    output: "أهلاً بالعالم"
+  },
 
-// sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
-}
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
+  en: {
+    label: "English",
+    example: "EXAMPLE / 02",
+    direction: "ltr",
+    code: `
+      <div class="text-zinc-700">// hello.world</div>
+      <div class="mt-2">
+        <span class="text-[#b58cff]">print</span><span class="text-white">(</span><span class="text-[#8cffb0]">"Hello World"</span><span class="text-white">)</span>
+      </div>
+    `,
+    output: "Hello World"
+  },
+
+  tr: {
+    label: "Türkçe",
+    example: "EXAMPLE / 03",
+    direction: "ltr",
+    code: `
+      <div class="text-zinc-700">// hello.world</div>
+      <div class="mt-2">
+        <span class="text-[#b58cff]">yaz</span><span class="text-white">(</span><span class="text-[#8cffb0]">"Selam Dünya"</span><span class="text-white">)</span>
+      </div>
+    `,
+    output: "Selam Dünya"
+  },
+
+  ja: {
+    label: "日本語",
+    example: "EXAMPLE / 04",
+    direction: "ltr",
+    code: `
+      <div class="text-zinc-700">// hello.world</div>
+      <div class="mt-2">
+        <span class="text-[#b58cff]">表示</span><span class="text-white">(</span><span class="text-[#8cffb0]">"こんにちは世界"</span><span class="text-white">)</span>
+      </div>
+    `,
+    output: "こんにちは世界"
+  }
+};
+
+const heroCode = document.getElementById("hero-code");
+const heroLanguage = document.getElementById("hero-language");
+const heroOutput = document.getElementById("hero-output");
+const heroExample = document.getElementById("hero-example");
+
+let heroKeys = Object.keys(heroExamples);
+let heroIndex = 0;
+
+function renderHero(key) {
+  const example = heroExamples[key];
+
+  heroCode.classList.add("out");
+
+  setTimeout(() => {
+    heroCode.setAttribute("dir", example.direction);
+    heroCode.innerHTML = example.code;
+    heroLanguage.textContent = example.label;
+    heroOutput.textContent = example.output;
+    heroExample.textContent = example.example;
+    heroCode.classList.remove("out");
+  }, 260);
 }
 
+renderHero(heroKeys[0]);
 
-// sidebar submenu open close js code
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show1");
-}
-let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
- navLinks.classList.toggle("show2");
-}
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
- navLinks.classList.toggle("show3");
-}
-// JavaScript for handling navigation arrows and bullets
-let images = ["assets/code1.png", "assets/code2.png", "assets/code3.png", "assets/code4.png", "assets/code5.png"]
-let des = ["Hello world application in world language (English)", "Application Hello World dans la langue du monde (français)", "Dünya dilinde Merhaba Dünya uygulaması (Türkçe)", "世界言語 (トルコ語) の Hello world アプリケーション", "تطبيق أهلاً بالعالم بلغة العالم (العربية)"]
-var idx = -1
-document.getElementById("code").src = images[0]
-document.getElementById("des").innerHTML = des[0]
+setInterval(() => {
+  heroIndex = (heroIndex + 1) % heroKeys.length;
+  renderHero(heroKeys[heroIndex]);
+}, 3600);
 
 
-function next() {
-    // Get the element by its ID
-    if (idx < images.length-1){
-        idx = idx + 1
-        document.getElementById("code").src = images[idx];
-        document.getElementById("des").innerHTML = des[idx]
-    }
-    else{
-        idx = -1
-    }
-}
-function prev() {
-    // Get the element by its ID
-    if (idx > 0){
-        idx = idx - 1
-        document.getElementById("code").src = images[idx];
-        document.getElementById("des").innerHTML = des[idx]
-    }
-    else{
-        idx = images.length -1
-    }
-}
-const intervalId = setInterval(next, 4000);
+const lessonExamples = {
+  ar: {
+    label: "Arabic",
+    title: "Learn through your own language.",
+    description:
+      "The learner can encounter variables, input, conditions, functions, recursion, and return values without first translating the whole lesson into English.",
+    code: `
+<div class="text-zinc-700"># حاسبة المضروب</div>
+<div class="mt-2"><span class="text-[#FF5C00]">متغير</span> <span class="text-white">الرقم</span> <span class="text-zinc-500">=</span> <span class="text-[#b58cff]">عدد_صحيح</span><span class="text-white">(</span><span class="text-[#b58cff]">استقبل</span><span class="text-white">(</span><span class="text-[#8cffb0]">"أدخل رقماً"</span><span class="text-white">))</span></div>
 
+<div class="mt-1"><span class="text-[#FF5C00]">دالة</span> <span class="text-[#fff]">مضروب</span><span class="text-white">(</span><span class="text-white">رقم</span><span class="text-white">)</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">اذا</span> <span class="text-white">رقم</span> <span class="text-white">==</span> <span class="text-purple-300">١</span> <span class="text-[#b58cff]">او</span> <span class="text-white">رقم</span> <span class="text-white">==</span> <span class="text-purple-300">٠</span> <span class="text-[#b58cff]">نفذ</span> <span class="text-[#b58cff]">ارجاع</span> <span class="text-purple-300">١</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">ارجاع</span> <span class="text-white">رقم</span> <span class="text-zinc-500">*</span> <span class="text-[#b58cff]">مضروب</span><span class="text-white">(</span><span class="text-white">رقم</span> <span class="text-zinc-500">-</span> <span class="text-purple-300">١</span><span class="text-white">)</span></div>
+<div><span class="text-[#FF5C00]">نهاية</span></div>
 
-particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 6,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 140,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true
+<div class="mt-1"><span class="text-[#b58cff]">طباعة</span><span class="text-white">(</span><span class="text-[#fff]">مضروب</span><span class="text-white">(</span><span class="text-purple-300">٥</span><span class="text-white">))</span></div>
+    `
+  },
+
+  en: {
+    label: "English",
+    title: "Learn the concepts first.",
+    description:
+      "English can be one expression of the language, while the underlying lessons stay focused on programming ideas rather than memorizing unfamiliar notation.",
+    code: `
+<div class="text-zinc-700">// factorial.world</div>
+<div class="mt-2"><span class="text-[#FF5C00]">var</span> <span class="text-white">number</span> <span class="text-zinc-500">=</span> <span class="text-[#b58cff]">integer</span><span class="text-white">(</span><span class="text-[#b58cff]">input</span><span class="text-white">(</span><span class="text-[#8cffb0]">"Enter a number"</span><span class="text-white">))</span></div>
+<div class="mt-1"><span class="text-[#FF5C00]">func</span> <span class="text-[#b58cff]">factorial</span><span class="text-white">(</span><span class="text-white">number</span><span class="text-white">)</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">if</span> <span class="text-white">number</span> <span class="text-white">==</span> <span class="text-purple-300">1</span> <span class="text-[#b58cff]">or</span> <span class="text-white">number</span> <span class="text-white">==</span> <span class="text-purple-300">0</span> <span class="text-[#b58cff]">return</span> <span class="text-purple-300">1</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">return</span> <span class="text-white">number</span> <span class="text-zinc-500">*</span> <span class="text-[#b58cff]">factorial</span><span class="text-white">(</span><span class="text-white">number</span> <span class="text-zinc-500">-</span> <span class="text-purple-300">1</span><span class="text-white">)</span></div>
+<div><span class="text-[#FF5C00]">end</span></div>
+<div class="mt-1"><span class="text-[#b58cff]">print</span><span class="text-white">(</span><span class="text-[#fff]">factorial</span><span class="text-white">(</span><span class="text-purple-300">5</span><span class="text-white">))</span></div>
+    `
+  },
+
+  tr: {
+    label: "Turkish",
+    title: "Let the first steps feel familiar.",
+    description:
+      "The same computational ideas can be presented in a language the learner already understands, helping the lesson start from curiosity rather than translation.",
+    code: `
+<div class="text-zinc-700">// factorial.world</div>
+<div class="mt-2"><span class="text-[#FF5C00]">değişken</span> <span class="text-white">sayı</span> <span class="text-zinc-500">=</span> <span class="text-[#b58cff]">tam_sayı</span><span class="text-white">(</span><span class="text-[#b58cff]">al</span><span class="text-white">(</span><span class="text-[#8cffb0]">"Bir sayı gir"</span><span class="text-white">))</span></div>
+<div class="mt-1"><span class="text-[#FF5C00]">fonksiyon</span> <span class="text-[#b58cff]">faktoriyel</span><span class="text-white">(</span><span class="text-white">sayı</span><span class="text-white">)</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">eğer</span> <span class="text-white">sayı</span> <span class="text-white">==</span> <span class="text-purple-300">1</span> <span class="text-[#b58cff]">veya</span> <span class="text-white">sayı</span> <span class="text-white">==</span> <span class="text-purple-300">0</span> <span class="text-[#b58cff]">döndür</span> <span class="text-purple-300">1</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">döndür</span> <span class="text-white">sayı</span> <span class="text-zinc-500">*</span> <span class="text-[#b58cff]">faktoriyel</span><span class="text-white">(</span><span class="text-white">sayı</span> <span class="text-zinc-500">-</span> <span class="text-purple-300">1</span><span class="text-white">)</span></div>
+<div><span class="text-[#FF5C00]">son</span></div>
+<div class="mt-1"><span class="text-[#b58cff]">yaz</span><span class="text-white">(</span><span class="text-[#fff]">faktoriyel</span><span class="text-white">(</span><span class="text-purple-300">5</span><span class="text-white">))</span></div>
+    `
+  },
+
+  ja: {
+    label: "Japanese",
+    title: "Keep the learning focused on thinking.",
+    description:
+      "Japanese-speaking learners can explore the same programming concepts while the language itself feels closer to their existing linguistic world.",
+    code: `
+<div class="text-zinc-700">// factorial.world</div>
+<div class="mt-2"><span class="text-[#FF5C00]">変数</span> <span class="text-white">数</span> <span class="text-zinc-500">=</span> <span class="text-[#b58cff]">整数</span><span class="text-white">(</span><span class="text-[#b58cff]">入力</span><span class="text-white">(</span><span class="text-[#8cffb0]">"数字を入力"</span><span class="text-white">))</span></div>
+<div class="mt-1"><span class="text-[#FF5C00]">関数</span> <span class="text-[#b58cff]">階乗</span><span class="text-white">(</span><span class="text-white">数</span><span class="text-white">)</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">もし</span> <span class="text-white">数</span> <span class="text-white">==</span> <span class="text-purple-300">1</span> <span class="text-[#b58cff]">または</span> <span class="text-white">数</span> <span class="text-white">==</span> <span class="text-purple-300">0</span> <span class="text-[#b58cff]">戻す</span> <span class="text-purple-300">1</span></div>
+<div class="pl-6"><span class="text-[#FF5C00]">戻す</span> <span class="text-white">数</span> <span class="text-zinc-500">*</span> <span class="text-[#b58cff]">階乗</span><span class="text-white">(</span><span class="text-white">数</span> <span class="text-zinc-500">-</span> <span class="text-purple-300">1</span><span class="text-white">)</span></div>
+<div><span class="text-[#FF5C00]">終了</span></div>
+<div class="mt-1"><span class="text-[#b58cff]">表示</span><span class="text-white">(</span><span class="text-[#fff]">階乗</span><span class="text-white">(</span><span class="text-purple-300">5</span><span class="text-white">))</span></div>
+    `
+  }
+};
+
+const lessonCode = document.getElementById("lesson-code");
+const lessonLabel = document.getElementById("lesson-label");
+const languageTitle = document.getElementById("language-title");
+const languageDescription = document.getElementById("language-description");
+const tabs = document.querySelectorAll(".language-tab");
+
+function renderLesson(key) {
+  const lesson = lessonExamples[key];
+
+  lessonCode.style.opacity = "0";
+  lessonCode.style.transform = "translateY(7px)";
+
+  setTimeout(() => {
+    lessonCode.innerHTML = lesson.code.trim();
+    lessonLabel.textContent = lesson.label;
+    languageTitle.textContent = lesson.title;
+    languageDescription.textContent = lesson.description;
+
+    lessonCode.style.opacity = "1";
+    lessonCode.style.transform = "translateY(0)";
+  }, 180);
+}
+
+renderLesson("ar");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(item => {
+      item.classList.remove("active");
+      item.classList.add("border-white/10", "text-zinc-500");
+    });
+
+    tab.classList.add("active");
+    tab.classList.remove("border-white/10", "text-zinc-500");
+
+    renderLesson(tab.dataset.lang);
   });
-  
-  
-  /* ---- stats.js config ---- */
-  
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
+});
+
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.12
+  }
+);
+
+document.querySelectorAll(".reveal").forEach(element => {
+  revealObserver.observe(element);
+});
+
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
