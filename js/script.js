@@ -211,3 +211,37 @@ document.querySelectorAll(".reveal").forEach(element => {
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
+  
+// Download dropdown
+(() => {
+  const menu = document.getElementById("download-menu");
+  const toggle = document.getElementById("download-toggle");
+  const options = document.getElementById("download-options");
+
+  if (!menu || !toggle || !options) return;
+
+  function closeMenu() {
+    options.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  toggle.addEventListener("click", () => {
+    const isOpen = !options.classList.contains("hidden");
+
+    options.classList.toggle("hidden", isOpen);
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+})();

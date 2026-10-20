@@ -251,13 +251,81 @@
           >
             Join community
           </a>
+          
+          <!-- DOWNLOAD DROPDOWN -->
+          <div class="relative" id="download-menu">
+            <button
+              id="download-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="download-options"
+              class="inline-flex items-center gap-2 rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:bg-[#8cffb0] transition"
+            >
+              Download
 
-          <a
-            href="https://github.com/ZiadRabea/WorldLang/releases/download/v2.0.0_Beta/WorldLang.Installer.exe"
-            class="inline-flex rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:bg-[#8cffb0] transition"
-          >
-            Download
-          </a>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div
+              id="download-options"
+              class="hidden absolute right-0 top-full mt-3 w-64 rounded-2xl border border-white/10 bg-[#0c0e0f]/95 p-2 shadow-2xl backdrop-blur-xl z-50"
+            >
+              <!-- 1. Desktop executable -->
+              <a
+                href="https://github.com/ZiadRabea/WorldLang/releases/download/v2.0.0_Beta/WorldLang.Installer.exe"
+                class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-zinc-300 hover:bg-white/[.06] hover:text-[#8cffb0] transition"
+              >
+                <span class="text-[#8cffb0]">↓</span>
+                <span>
+                  <span class="block font-medium">Desktop version</span>
+                  <span class="block mt-1 text-xs text-zinc-600">Download executable</span>
+                </span>
+              </a>
+
+              <!-- 2. Online IDE -->
+              <a
+                href="https://ziadrabea.github.io/worldlang-Web"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-zinc-300 hover:bg-white/[.06] hover:text-[#8cffb0] transition"
+              >
+                <span class="text-[#8cffb0]">↗</span>
+                <span>
+                  <span class="block font-medium">Online IDE</span>
+                  <span class="block mt-1 text-xs text-zinc-600">Code in your browser</span>
+                </span>
+              </a>
+
+              <!-- 3. Android app (coming soon) -->
+              <a
+                href="#"
+                aria-disabled="true"
+                title="Android version coming soon"
+                class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-zinc-500 cursor-not-allowed"
+              >
+                <span class="text-[#b58cff]">◷</span>
+                <span>
+                  <span class="block font-medium">Android IDE</span>
+                  <span class="block mt-1 text-xs text-zinc-600">Coming soon</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </nav>
     </div>
